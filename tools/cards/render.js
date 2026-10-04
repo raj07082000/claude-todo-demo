@@ -28,4 +28,4 @@ for(const c of C){await p.setContent(page(c));await p.waitForTimeout(100);const 
 const grid=`<html><body style="margin:0;background:#fff;width:1600px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:12px;box-sizing:border-box">${files.map(f=>`<img src="file://${out}${f}" style="width:100%">`).join('')}</body></html>`;
 fs.writeFileSync('/tmp/claude-0/-home-user-claude-todo-demo/d3201023-d8ce-51dc-8cca-5b506d91d0bb/scratchpad/grid.html',grid);
 await p.setViewportSize({width:1600,height:900});await p.goto('file:///tmp/claude-0/-home-user-claude-todo-demo/d3201023-d8ce-51dc-8cca-5b506d91d0bb/scratchpad/grid.html');await p.waitForTimeout(300);
-await p.screenshot({path:out+'part-1-all.png',fullPage:true});await b.close();console.log(files.length);})();
+await p.screenshot({path:out+'part-1-all.jpg',fullPage:true,type:'jpeg',quality:92});await b.close();console.log(files.length);})();
